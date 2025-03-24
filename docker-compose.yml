@@ -13,7 +13,7 @@ services:
     command: npm start
 
   mongo:
-    image: mongo:8
+    image: mongo:6
     restart: always
     ports:
       - "27017:27017"
