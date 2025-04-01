@@ -8,6 +8,7 @@ exports.getPresentation = async (_req, res) => {
         credentials: [
           {
             overview: {
+              id: "cred1",
               issued: new Date("2023-12-13"),
               expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
               status: "active",
@@ -42,6 +43,7 @@ exports.getPresentation = async (_req, res) => {
           },
           {
             overview: {
+              id: "cred2",
               issued: new Date("2023-08-26"),
               expires: new Date("2024-08-26"),
               status: "expired",
@@ -83,6 +85,7 @@ exports.getPresentation = async (_req, res) => {
         credentials: [
           {
             overview: {
+              id: "cred3",
               issued: new Date("2023-12-13"),
               expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
               status: "active",
@@ -118,6 +121,7 @@ exports.getPresentation = async (_req, res) => {
           },
           {
             overview: {
+              id: "cred4",
               issued: new Date("2023-12-13"),
               expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
               status: "active",
@@ -160,6 +164,7 @@ exports.getPresentation = async (_req, res) => {
         credentials: [
           {
             overview: {
+              id: "cred5",
               issued: new Date("2023-08-26"),
               expires: new Date("2024-08-26"),
               status: "active",
@@ -190,7 +195,10 @@ exports.getPresentation = async (_req, res) => {
                   },
                   {
                     name: "Street",
-                    value: "Merchant's dream 13",
+                    items: [
+                      { name: "Number", value: "13" },
+                      { name: "Name", value: "Merchant's dream" },
+                    ],
                   },
                 ],
               },
